@@ -98,6 +98,7 @@ const unhandledProps = (props, propTypes) => {
 const formFields = (display, data) => {
   const renderField = (field) => {
     const { module, label, ...rest } = field;
+
     const Module = dataModules[module];
     const moduleValue = data && data[field.attribute];
     const key = `${module}.${field.attribute}.${moduleValue}`;

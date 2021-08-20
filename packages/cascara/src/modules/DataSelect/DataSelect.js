@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { Input } from 'reakit/Input';
 import pt from 'prop-types';
+
+import BaseModule from '../BaseModule';
 import { ModuleContext } from '../context';
 import styles from '../DataModule.module.scss';
 
-import ErrorBoundary from '../../private/ErrorBoundary';
+import { getConditionalLabelProps } from '../../lib/getConditionalLabelProps';
 
 const propTypes = {
   /** A module can have an Attribute, which will be used as form field name */
@@ -38,47 +40,44 @@ const DataSelect = ({
 }) => {
   const { isEditing, formMethods } = useContext(ModuleContext);
 
+  const conditionalLabelProps = getConditionalLabelProps(label, isLabeled);
+
   const renderEditing = (
-    <label htmlFor={label}>
-      {label && isLabeled && <span className={styles.Label}>{label}</span>}
-      <Input
-        {...rest}
-        as='select'
-        className={styles.Input}
-        defaultValue={value}
-        id={label}
-        name={attribute || label}
-        ref={formMethods?.register}
-      >
-        {options ? (
-          options.map((option) => (
-            <option key={option.value} {...option}>
-              {option.label || option.value}
-            </option>
-          ))
-        ) : (
-          <option value={value}>{value}</option>
-        )}
-      </Input>
-    </label>
+    <Input
+      {...conditionalLabelProps}
+      {...rest}
+      as='select'
+      className={styles.Input}
+      defaultValue={value}
+      id={attribute || label}
+      name={attribute || label}
+      ref={formMethods?.register}
+    >
+      {options ? (
+        options.map((option) => (
+          <option key={option.value} {...option}>
+            {option.label || option.value}
+          </option>
+        ))
+      ) : (
+        <option value={value}>{value}</option>
+      )}
+    </Input>
   );
 
   const renderDisplay = (
-    <span>
-      {label && isLabeled && <span className={styles.Label}>{label}</span>}
-      <span className={styles.Input} {...rest}>
-        {value}
-      </span>
+    <span {...rest} aria-label={label} className={styles.Input}>
+      {value}
     </span>
   );
 
   // Do not render an editable input if the module is not editable
   return (
-    <ErrorBoundary>
+    <BaseModule attribute={attribute} isLabeled={isLabeled} label={label}>
       <div className={styles.Select}>
         {isEditing && isEditable ? renderEditing : renderDisplay}
       </div>
-    </ErrorBoundary>
+    </BaseModule>
   );
 };
 

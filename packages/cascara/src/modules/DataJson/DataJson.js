@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { Input } from 'reakit/Input';
 import pt from 'prop-types';
 import TextareaAutosize from 'react-textarea-autosize';
+
+import BaseModule from '../BaseModule';
 import { ModuleContext } from '../context';
 import styles from '../DataModule.module.scss';
 
-import ErrorBoundary from '../../private/ErrorBoundary';
+import { getConditionalLabelProps } from '../../lib/getConditionalLabelProps';
 
 const propTypes = {
   /** A module can have an Attribute, which will be used as form field name */
@@ -31,37 +33,39 @@ const DataJson = ({
   const { isEditing, formMethods } = useContext(ModuleContext);
   const jsonValue = JSON.stringify(value, null, 4);
 
+  const conditionalLabelProps = getConditionalLabelProps(label, isLabeled);
+
   const renderEditing = (
-    <label htmlFor={label}>
-      {label && isLabeled && <span className={styles.Label}>{label}</span>}
-      <Input
-        {...rest}
-        as={TextareaAutosize}
-        className={styles.Input}
-        defaultValue={jsonValue}
-        id={label}
-        name={attribute || label}
-        ref={formMethods?.register}
-      />
-    </label>
+    <Input
+      {...conditionalLabelProps}
+      {...rest}
+      as={TextareaAutosize}
+      className={styles.Input}
+      defaultValue={jsonValue}
+      id={attribute || label}
+      name={attribute || label}
+      ref={formMethods?.register}
+    />
   );
 
   const renderDisplay = (
-    <span>
-      {label && isLabeled && <span className={styles.Label}>{label}</span>}
-      <span className={styles.Input} style={{ whiteSpace: 'pre' }} {...rest}>
-        {jsonValue}
-      </span>
+    <span
+      {...rest}
+      aria-label={label}
+      className={styles.Input}
+      style={{ whiteSpace: 'pre' }}
+    >
+      {jsonValue}
     </span>
   );
 
   // Do not render an editable input if the module is not editable
   return (
-    <ErrorBoundary>
+    <BaseModule attribute={attribute} isLabeled={isLabeled} label={label}>
       <div className={styles.TextArea}>
         {isEditing && isEditable ? renderEditing : renderDisplay}
       </div>
-    </ErrorBoundary>
+    </BaseModule>
   );
 };
 

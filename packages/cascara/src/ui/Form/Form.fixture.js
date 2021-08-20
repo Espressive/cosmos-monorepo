@@ -39,6 +39,7 @@ const actions = {
 const dataDisplay = [
   {
     attribute: 'eid',
+    isEditable: false,
     label: 'EID',
     module: 'text',
   },
@@ -46,11 +47,13 @@ const dataDisplay = [
     fields: [
       {
         attribute: 'firstName',
+        isEditable: true,
         label: 'First Name',
         module: 'text',
       },
       {
         attribute: 'lastName',
+        isEditable: true,
         label: 'Last Name',
         module: 'text',
       },
@@ -59,6 +62,7 @@ const dataDisplay = [
   },
   {
     attribute: 'homePhone',
+    isEditable: true,
     label: 'Home Phone',
     module: 'text',
   },
@@ -157,10 +161,16 @@ export default {
       data={{}}
       dataDisplay={dataDisplay}
       isInitialEditing
+      name='test-form'
     />
   ),
   dataWithDisplay: (
-    <DataWithDisplay actions={actions} data={data} dataDisplay={dataDisplay} />
+    <DataWithDisplay
+      actions={actions}
+      data={data}
+      dataDisplay={dataDisplay}
+      name='test-form'
+    />
   ),
   empty: <EmptyForm actions={actions} data={{}} dataDisplay={[]} />,
   initialEditing: (
@@ -169,9 +179,16 @@ export default {
       data={data}
       dataDisplay={dataDisplay}
       isInitialEditing
+      name='test-form'
     />
   ),
   loading: (
-    <LoadingForm actions={actions} data={undefined} dataDisplay={dataDisplay} />
+    <LoadingForm
+      actions={actions}
+      data={undefined}
+      dataDisplay={dataDisplay}
+      name='test-form'
+    />
   ),
 };
+export { dataDisplay };

@@ -23,6 +23,9 @@ const ActionButton = ({ actionName, content, isLabeled = false, ...rest }) => {
   // @bje we need to decide if we go for content or label here, both makes no sense
   const { label, ...restWithoutLabel } = rest;
 
+  // do not add aria label if tag is used
+  const ariaLabel = isLabeled ? {} : { 'aria-label': label };
+
   //
   // initially, this was called actionName, but now we ...spread
   // all props into the button. So the correct way of calling it
@@ -46,8 +49,8 @@ const ActionButton = ({ actionName, content, isLabeled = false, ...rest }) => {
 
   return isEditing ? null : (
     <Button
+      {...ariaLabel}
       {...restWithoutLabel}
-      aria-label={label}
       className='ui basic button'
       name={name}
       onClick={handleClick}

@@ -16,15 +16,15 @@ $module-background: #f0f0f0;
   font-weight: 600;
 }
 
+.LabelText {
+  @extend %ModuleLabel;
+}
+
 %ModuleContainer {
   width: 100%;
   padding: $module-padding;
 
   // border-bottom: 1px solid red;
-
-  .LabelText {
-    @extend %ModuleLabel;
-  }
 
   .Input {
     @include cascara.scroll-horizontal;

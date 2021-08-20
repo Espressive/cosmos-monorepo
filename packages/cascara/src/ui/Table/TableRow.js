@@ -84,6 +84,7 @@ const TableRow = ({ config = {}, record = {} }) => {
 
   const rowCells = columns.map((column) => {
     const { module, isLabeled, ...rest } = column;
+
     const Module = dataModules[module];
     const moduleValue = record[column.attribute];
 

@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { Checkbox, useCheckboxState } from 'reakit/Checkbox';
 import pt from 'prop-types';
 
+import BaseModule from '../BaseModule';
 import { ModuleContext } from '../context';
 import styles from '../DataModule.module.scss';
 
-import ErrorBoundary from '../../private/ErrorBoundary';
+import { getConditionalLabelProps } from '../../lib/getConditionalLabelProps';
 
 const propTypes = {
   /** A module can have an Attribute, which will be used as form field name */
@@ -31,40 +32,44 @@ const DataCheckbox = ({
   const { isEditing, formMethods } = useContext(ModuleContext);
   const checkbox = useCheckboxState({ state: Boolean(value) });
 
+  const conditionalLabelProps = getConditionalLabelProps(label, isLabeled);
+
   const renderEditing = (
-    <label htmlFor={label}>
-      <Checkbox
-        {...rest}
-        {...checkbox}
-        className={styles.Input}
-        id={label}
-        name={attribute || label}
-        ref={formMethods?.register}
-      />
-      {label && isLabeled && <span className={styles.LabelText}>{label}</span>}
-    </label>
+    <Checkbox
+      {...conditionalLabelProps}
+      {...rest}
+      {...checkbox}
+      aria-label={label}
+      className={styles.Input}
+      defaultValue={value}
+      id={attribute || label}
+      name={attribute || label}
+      ref={formMethods?.register}
+      type='checkbox'
+    />
   );
 
   const renderDisplay = (
-    <span>
+    <>
       <span
+        {...rest}
+        aria-label={label}
         className={styles.Input}
         data-checked={value ? true : undefined}
-        {...rest}
       >
         {value}
       </span>
       {label && isLabeled && <span className={styles.LabelText}>{label}</span>}
-    </span>
+    </>
   );
 
   // Do not render an editable input if the module is not editable
   return (
-    <ErrorBoundary>
+    <BaseModule attribute={attribute} isLabeled={isLabeled} label={label}>
       <div className={styles.Checkbox}>
         {isEditing && isEditable ? renderEditing : renderDisplay}
       </div>
-    </ErrorBoundary>
+    </BaseModule>
   );
 };
 

@@ -5,143 +5,167 @@ exports[`Form snapshot test 1`] = `
   <form
     class="Form"
   >
-    <div
-      class="Text"
+    <label
+      for="eid"
     >
-      <span>
+      <span
+        class="LabelText"
+      >
+        EID
+      </span>
+      <div
+        class="Text"
+      >
         <span
-          class="LabelText"
-        >
-          EID
-        </span>
-        <span
+          aria-label="EID"
           class="Input"
         >
           e024f231-6265-4a6e-8d65-a837e308ae67
         </span>
-      </span>
-    </div>
+      </div>
+    </label>
     <div
       class="FormRow"
       style="grid-template-columns: 1fr 1fr 2fr;"
     >
-      <div
-        class="Text"
+      <label
+        for="firstName"
       >
-        <span>
+        <span
+          class="LabelText"
+        >
+          First Name
+        </span>
+        <div
+          class="Text"
+        >
           <span
-            class="LabelText"
-          >
-            First Name
-          </span>
-          <span
+            aria-label="First Name"
             class="Input"
           >
             Keaton
           </span>
-        </span>
-      </div>
-      <div
-        class="Text"
+        </div>
+      </label>
+      <label
+        for="lastName"
       >
-        <span>
+        <span
+          class="LabelText"
+        >
+          Last Name
+        </span>
+        <div
+          class="Text"
+        >
           <span
-            class="LabelText"
-          >
-            Last Name
-          </span>
-          <span
+            aria-label="Last Name"
             class="Input"
           >
             Streich
           </span>
-        </span>
-      </div>
-      <div
-        class="Text"
+        </div>
+      </label>
+      <label
+        for="officePhone"
       >
-        <span>
+        <span
+          class="LabelText"
+        >
+          Office Phone
+        </span>
+        <div
+          class="Text"
+        >
           <span
-            class="LabelText"
-          >
-            Office Phone
-          </span>
-          <span
+            aria-label="Office Phone"
             class="Input"
           >
             (808) 221-0860 x54694
           </span>
-        </span>
-      </div>
+        </div>
+      </label>
     </div>
-    <div
-      class="Text"
+    <label
+      for="homePhone"
     >
-      <span>
+      <span
+        class="LabelText"
+      >
+        Home Phone
+      </span>
+      <div
+        class="Text"
+      >
         <span
-          class="LabelText"
-        >
-          Home Phone
-        </span>
-        <span
+          aria-label="Home Phone"
           class="Input"
         >
           391-887-9830 x658
         </span>
-      </span>
-    </div>
+      </div>
+    </label>
     <div
       class="FormRow"
       style="grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));"
     >
-      <div
-        class="Text"
+      <label
+        for="title"
       >
-        <span>
+        <span
+          class="LabelText"
+        >
+          Title
+        </span>
+        <div
+          class="Text"
+        >
           <span
-            class="LabelText"
-          >
-            Title
-          </span>
-          <span
+            aria-label="Title"
             class="Input"
           >
             Global Implementation Developer
           </span>
-        </span>
-      </div>
-      <div
-        class="Text"
+        </div>
+      </label>
+      <label
+        for="department"
       >
-        <span>
+        <span
+          class="LabelText"
+        >
+          Department
+        </span>
+        <div
+          class="Text"
+        >
           <span
-            class="LabelText"
-          >
-            Department
-          </span>
-          <span
+            aria-label="Department"
             class="Input"
           >
             Assurance
           </span>
-        </span>
-      </div>
-      <div
-        class="Text"
+        </div>
+      </label>
+      <label
+        for="country"
       >
-        <span>
+        <span
+          class="LabelText"
+        >
+          Country
+        </span>
+        <div
+          class="Text"
+        >
           <span
-            class="LabelText"
-          >
-            Country
-          </span>
-          <span
+            aria-label="Country"
             class="Input"
           >
             ZW
           </span>
-        </span>
-      </div>
+        </div>
+      </label>
     </div>
     <div
       class="FormActionBar"

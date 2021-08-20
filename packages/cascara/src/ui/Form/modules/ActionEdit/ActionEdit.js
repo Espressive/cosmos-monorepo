@@ -28,17 +28,18 @@ const ActionEdit = ({
   const { isDirty, isSubmitting } = formState;
 
   const handleReset = useCallback(() => {
-    onAction(
-      // fake target
-      {
-        name: 'edit.cancel',
-      },
-      {
-        ...data,
-      }
-    );
+    onAction &&
+      onAction(
+        // fake target
+        {
+          name: 'edit.cancel',
+        },
+        {
+          ...data,
+        }
+      );
 
-    exitEditMode();
+    exitEditMode && exitEditMode();
   }, [onAction, exitEditMode, data]);
 
   const handleCancel = useCallback(() => {
@@ -52,33 +53,35 @@ const ActionEdit = ({
     // FDS-91: We are resetting the form with whatever is in data.
     // We don't know if this is the best way to do it in React.
     reset({ ...data });
-    onAction(
-      // fake target
-      {
-        name: 'edit.start',
-      },
-      {
-        ...data,
-      }
-    );
+    onAction &&
+      onAction(
+        // fake target
+        {
+          name: 'edit.start',
+        },
+        {
+          ...data,
+        }
+      );
 
-    enterEditMode();
+    enterEditMode && enterEditMode();
   }, [reset, data, onAction, enterEditMode]);
 
   const onSubmit = useCallback(
     (incomingData) => {
-      onAction(
-        // fake target
-        {
-          name: 'edit.save',
-        },
-        {
-          ...data,
-          ...incomingData,
-        }
-      );
+      onAction &&
+        onAction(
+          // fake target
+          {
+            name: 'edit.save',
+          },
+          {
+            ...data,
+            ...incomingData,
+          }
+        );
 
-      exitEditMode();
+      exitEditMode && exitEditMode();
     },
     [onAction, exitEditMode, data]
   );

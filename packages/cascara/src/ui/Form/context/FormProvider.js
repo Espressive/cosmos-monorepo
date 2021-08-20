@@ -7,11 +7,14 @@ import { ModuleContext, ModuleProvider } from '../../../modules/context';
 
 const propTypes = {
   children: pt.oneOfType([pt.node, pt.arrayOf(pt.node)]),
-  // eslint-disable-next-line react/forbid-prop-types -- We do not know what the object params might be in this case
-  value: pt.object,
+  // A form needs to have a name to be accessible
+  // see: https://github.com/testing-library/dom-testing-library/issues/474
+  name: pt.string.isRequired,
+  // A base context value can be passed in
+  value: pt.shape({}),
 };
 
-const FormProvider = ({ children, value, ...props }) => {
+const FormProvider = ({ children, value, name, ...props }) => {
   const formMethods = useForm();
   const { handleSubmit } = formMethods;
 

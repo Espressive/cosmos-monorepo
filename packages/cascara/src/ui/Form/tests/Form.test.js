@@ -4,7 +4,23 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import 'mutationobserver-shim';
 
+import cosmosFixtures, {
+  dataDisplay as fixtDataDisplay,
+} from '../Form.fixture';
 import Form from '..';
+
+const { initialEditing } = cosmosFixtures;
+const formFields = fixtDataDisplay.reduce((formFields, item) => {
+  if (item.module === 'row') {
+    const rowFields = item?.fields;
+
+    formFields.push(...rowFields);
+  } else {
+    formFields.push(item);
+  }
+
+  return formFields;
+}, []);
 
 faker.seed(1);
 
@@ -252,5 +268,17 @@ describe('Form', () => {
 
     // check that onAction event was triggered
     expect(onAction).toHaveBeenCalled();
+  });
+
+  // FDS-249: all modules need to present the aria-label on the inputs
+  //
+  // In Form, the isLabeled prop is always set to true in modules, hence the label
+  // tags must be rendered. This test looks for label tags and expects
+  // to find one for each Form field.
+  test('makes sure there is only an aria-label if there is no label linked to the input', () => {
+    const { container } = render(initialEditing);
+    const labelTags = container.querySelector('form').querySelectorAll('label');
+
+    expect(labelTags).toHaveLength(formFields.length);
   });
 });

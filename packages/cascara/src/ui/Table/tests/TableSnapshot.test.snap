@@ -7,90 +7,96 @@ exports[`Table snapshot tests actions with non-existent module 1`] = `
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="eID"
           class="Input"
         >
           1a180380-fc30-4117-ae79-dac13fc0ef38
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Name"
           class="Input"
         >
           001Ruben01_Sync
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="Protected"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="ELC"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Email"
-    >
-      <span>
+    <span>
+      <div
+        class="Email"
+      >
         <span
+          aria-label="Created by"
           class="Input"
         >
           test@espressive.com
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Created at"
           class="Input"
         >
           2021-03-31T17:29:28.162758Z
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="CellActions"
@@ -142,90 +148,96 @@ exports[`Table snapshot tests conditional actions 1`] = `
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="eID"
           class="Input"
         >
           1a180380-fc30-4117-ae79-dac13fc0ef38
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Name"
           class="Input"
         >
           001Ruben01_Sync
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="Protected"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="ELC"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Email"
-    >
-      <span>
+    <span>
+      <div
+        class="Email"
+      >
         <span
+          aria-label="Created by"
           class="Input"
         >
           test@espressive.com
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Created at"
           class="Input"
         >
           2021-03-31T17:29:28.162758Z
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="CellActions"
@@ -249,90 +261,96 @@ exports[`Table snapshot tests dataDisplay with non-existent module 1`] = `
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="eID"
           class="Input"
         >
           1a180380-fc30-4117-ae79-dac13fc0ef38
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Name"
           class="Input"
         >
           001Ruben01_Sync
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="Protected"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="ELC"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Email"
-    >
-      <span>
+    <span>
+      <div
+        class="Email"
+      >
         <span
+          aria-label="Created by"
           class="Input"
         >
           test@espressive.com
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Created at"
           class="Input"
         >
           2021-03-31T17:29:28.162758Z
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
@@ -436,90 +454,96 @@ exports[`Table snapshot tests with actions 1`] = `
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="eID"
           class="Input"
         >
           1a180380-fc30-4117-ae79-dac13fc0ef38
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Name"
           class="Input"
         >
           001Ruben01_Sync
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="Protected"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="ELC"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Email"
-    >
-      <span>
+    <span>
+      <div
+        class="Email"
+      >
         <span
+          aria-label="Created by"
           class="Input"
         >
           test@espressive.com
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Created at"
           class="Input"
         >
           2021-03-31T17:29:28.162758Z
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="CellActions"
@@ -565,90 +589,96 @@ exports[`Table snapshot tests with deprecated props 1`] = `
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="eID"
           class="Input"
         >
           1a180380-fc30-4117-ae79-dac13fc0ef38
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Name"
           class="Input"
         >
           001Ruben01_Sync
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="Protected"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="ELC"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Email"
-    >
-      <span>
+    <span>
+      <div
+        class="Email"
+      >
         <span
+          aria-label="Created by"
           class="Input"
         >
           test@espressive.com
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Created at"
           class="Input"
         >
           2021-03-31T17:29:28.162758Z
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="CellActions"
@@ -694,90 +724,96 @@ exports[`Table snapshot tests without <ActionBar /> 1`] = `
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="eID"
           class="Input"
         >
           1a180380-fc30-4117-ae79-dac13fc0ef38
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Name"
           class="Input"
         >
           001Ruben01_Sync
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="Protected"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="ELC"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Email"
-    >
-      <span>
+    <span>
+      <div
+        class="Email"
+      >
         <span
+          aria-label="Created by"
           class="Input"
         >
           test@espressive.com
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Created at"
           class="Input"
         >
           2021-03-31T17:29:28.162758Z
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="CellActions"
@@ -808,90 +844,96 @@ exports[`Table snapshot tests without actions 1`] = `
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="eID"
           class="Input"
         >
           1a180380-fc30-4117-ae79-dac13fc0ef38
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Name"
           class="Input"
         >
           001Ruben01_Sync
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="Protected"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Checkbox"
-    >
-      <span>
+    <span>
+      <div
+        class="Checkbox"
+      >
         <span
+          aria-label="ELC"
           class="Input"
           data-checked="true"
         />
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Email"
-    >
-      <span>
+    <span>
+      <div
+        class="Email"
+      >
         <span
+          aria-label="Created by"
           class="Input"
         >
           test@espressive.com
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
   <td
     class="Cell"
   >
-    <div
-      class="Text"
-    >
-      <span>
+    <span>
+      <div
+        class="Text"
+      >
         <span
+          aria-label="Created at"
           class="Input"
         >
           2021-03-31T17:29:28.162758Z
         </span>
-      </span>
-    </div>
+      </div>
+    </span>
   </td>
 </tr>
 `;

@@ -55,7 +55,7 @@ const ALL_DATA_MODULES = (
     <DataNumber label='Number' value={2354} />
     <DataSelect label='Select' options={options} value='Washington' />
     <DataText label='Text' value={lorem} />
-    <DataCheckbox label='Checkbox A' value />
+    <DataCheckbox label='Checkbox A' />
     {/* {<DataRadio label='Radio' options={boolOptions} />} */}
     <DataTextArea label='TextArea' value={lorem} />
   </>
@@ -130,7 +130,7 @@ const AllModules = ({ data, dataConfig }) => {
 
       <FormProvider>
         <h2>Action Modules</h2>
-        <ActionButton />
+        <ActionButton label='Button' />
         <FormActionEdit />
       </FormProvider>
 

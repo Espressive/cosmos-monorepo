@@ -6,7 +6,7 @@ import cosmosFixtures, {
   dataResults,
 } from '../fixtures/UserExperience.fixture';
 
-const { withoutActionBar, withOnAction } = cosmosFixtures;
+const { withoutActionBar, withOnAction, withoutActions } = cosmosFixtures;
 
 describe('Table UX', () => {
   test('custom actions', () => {
@@ -74,6 +74,8 @@ describe('Table UX', () => {
     expect(onAction.mock.calls[1][0]).toEqual({ name: 'edit.save' });
     expect(onAction.mock.calls[1][1]).toEqual({
       ...dataResults[0],
+      created_in_elc: 'true',
+      is_protected: 'true',
       sys_created_by: testEmail,
     });
   });
@@ -128,5 +130,17 @@ describe('Table UX', () => {
     expect(onAction.mock.calls[1][1]).toEqual(dataResults[0]);
 
     window.confirm = jsdomConfirm; // restore the jsdom confirm
+  });
+
+  // FDS-249: all modules need to present the aria-label on the inputs
+  //
+  // In table, the isLabeled prop is always set to false, hence no label
+  // tags must be rendered. This test looks for label tags and expects
+  // to find none.
+  test('makes sure there is only an aria-label if there is no label linked to the input', () => {
+    render(withoutActions);
+    const labelTags = screen.getByRole('table').querySelector('label');
+
+    expect(labelTags).toBeNull();
   });
 });
