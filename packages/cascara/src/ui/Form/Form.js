@@ -167,7 +167,7 @@ const Form = ({
   dataDisplay,
   onAction,
   isEditable: incomingIsEditable,
-  isInitialEditing = false,
+  isInitialEditing,
   ...rest
 }) => {
   const renderedActions = renderActions(actions);
@@ -176,8 +176,11 @@ const Form = ({
       ? Boolean(actions?.modules?.find((action) => action.module === 'edit'))
       : incomingIsEditable;
 
-  const [isEditing, setIsEtiding] = useState(() =>
-    !isEditable ? false : isInitialEditing
+  const [isEditing, setIsEtiding] = useState(
+    () => Boolean(isInitialEditing)
+    // The permutation of isEditable in this check breaks its deriving logic above,
+    // as the check always results in the transition from true to false and vis-a-vis.
+    // !isEditable ? false : isInitialEditing
   );
 
   // A form cannot be in an initial editing state while also not having a dataDisplay defined.

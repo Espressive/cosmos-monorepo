@@ -4,7 +4,7 @@ module.exports = {
   extends: ['@espressive', 'prettier'], // prettier must be last so we override any rules that potentially conflict with Prettier
   overrides: [
     {
-      files: ['**/tests/**/*'],
+      files: ['**/tests/**/*', '**/*.test.js'],
       rules: {
         'no-alert': 0,
         'no-console': 0,
@@ -49,6 +49,7 @@ module.exports = {
       // Namespace imports are an important part for theme building
       files: ['**/*.fixture.js'],
       rules: {
+        'jest/no-jest-import': 0,
         'no-alert': 0,
         'no-console': 0,
         'sort-keys': 0,

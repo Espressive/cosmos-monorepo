@@ -25,7 +25,7 @@ const DataCheckbox = ({
   isEditable = true,
   isLabeled = true,
   label,
-  value,
+  value = false,
   ...rest
 }) => {
   const { isEditing, formMethods } = useContext(ModuleContext);

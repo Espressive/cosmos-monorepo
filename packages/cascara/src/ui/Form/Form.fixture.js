@@ -16,6 +16,7 @@ const data = {
   lastName: faker.name.lastName(),
   officePhone: faker.phone.phoneNumber(),
   title: faker.name.jobTitle(),
+  checkbox: false,
 };
 
 const actions = {
@@ -84,6 +85,11 @@ const dataDisplay = [
       },
     ],
     module: 'row',
+  },
+  {
+    attribute: 'checkbox',
+    label: 'Checkbox',
+    module: 'checkbox',
   },
 ];
 
