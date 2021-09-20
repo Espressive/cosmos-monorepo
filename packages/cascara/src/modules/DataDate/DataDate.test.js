@@ -1,24 +1,15 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import DateDate from './DataDate';
 import { DisplayDataDate } from './DataDate.fixture';
 
-import fixtures from '../helpers/ModuleTestHelper.fixture';
+// import fixtures from '../helpers/ModuleTestHelper.fixture';
 
-const { checkbox: ModuleTestWrapper } = fixtures;
+// const { checkbox: ModuleTestWrapper } = fixtures;
 
 const VALUE = '2021-07-24';
-const EXPECTED_VALUE_TYPE = 'string';
-const DATA_DISPLAY = [
-  {
-    attribute: 'date',
-    label: 'Date',
-    module: 'date',
-  },
-];
-const DATA = { date: VALUE };
 
 describe('Input Date', () => {
   // without ModuleSandbox will render the property information into a span
@@ -66,35 +57,4 @@ describe('Input Date', () => {
       expect(input).toHaveValue(newDate);
     });
   });
-
-  // describe('data type', () => {
-  //   test('it returns the correct data type', async () => {
-  //     const handleFormAction = jest
-  //       .fn()
-  //       .mockImplementation((action, formData) => true);
-
-  //     render(
-  //       <ModuleTestWrapper
-  //         data={DATA}
-  //         dataDisplay={DATA_DISPLAY}
-  //         isInitialEditing
-  //         onAction={handleFormAction}
-  //       />
-  //     );
-
-  //     await waitFor(() => screen.findByText('Date'));
-
-  //     const dateInput = screen.getByText('Date');
-  //     userEvent.click(dateInput);
-
-  //     const saveButton = screen.getByRole('button', { name: 'Save' });
-  //     userEvent.click(saveButton);
-
-  //     expect(handleFormAction.mock.calls[0][0]).toEqual({ name: 'edit.save' });
-  //     expect(handleFormAction.mock.calls[0][1]).toEqual({ date: VALUE });
-  //     expect(typeof handleFormAction.mock.calls[0][1].date).toEqual(
-  //       EXPECTED_VALUE_TYPE
-  //     );
-  //   });
-  // });
 });

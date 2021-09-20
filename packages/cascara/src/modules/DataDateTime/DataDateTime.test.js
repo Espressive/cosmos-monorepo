@@ -1,11 +1,10 @@
-import React from 'react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import cosmosFixtures, {
   displayProps,
   editingProps,
 } from './DataDateTime.fixture';
-import fixtures from '../helpers/ModuleTestHelper.fixture';
+// import fixtures from '../helpers/ModuleTestHelper.fixture';
 
 // const { checkbox } = fixtures;
 
@@ -15,15 +14,15 @@ import fixtures from '../helpers/ModuleTestHelper.fixture';
 const { display, editing, displayNoLabel, editingNoLabel } = cosmosFixtures;
 
 const VALUE = '2018-06-12T19:30';
-const EXPECTED_VALUE_TYPE = 'string';
-const DATA_DISPLAY = [
-  {
-    attribute: 'dateTime',
-    label: 'Datetime',
-    module: 'datetime',
-  },
-];
-const DATA = { dateTime: VALUE };
+// const EXPECTED_VALUE_TYPE = 'string';
+// const DATA_DISPLAY = [
+//   {
+//     attribute: 'dateTime',
+//     label: 'Datetime',
+//     module: 'datetime',
+//   },
+// ];
+// const DATA = { dateTime: VALUE };
 
 describe('DataDateTime', () => {
   // without ModuleSandbox will render the property information into a span
@@ -116,36 +115,4 @@ describe('DataDateTime', () => {
       expect(input).toBeDefined();
     });
   });
-
-  // describe('data type', () => {
-  //   test('it returns the correct data type', async () => {
-  //     const newDate = '2018-06-14T19:30';
-  //     const handleFormAction = jest
-  //       .fn()
-  //       .mockImplementation((action, formData) => true);
-
-  //     render(
-  //       <ModuleTestWrapper
-  //         data={DATA}
-  //         dataDisplay={DATA_DISPLAY}
-  //         isInitialEditing
-  //         onAction={handleFormAction}
-  //       />
-  //     );
-
-  //     await waitFor(() => screen.findByText('Datetime'));
-
-  //     const dateInput = screen.getByText('Datetime');
-  //     fireEvent.change(dateInput, { target: { value: newDate } });
-
-  //     const saveButton = screen.getByRole('button', { name: 'Save' });
-  //     fireEvent.click(saveButton);
-
-  //     expect(handleFormAction.mock.calls[0][0]).toEqual({ name: 'edit.save' });
-  //     expect(handleFormAction.mock.calls[0][1]).toEqual({ date: newDate });
-  //     expect(typeof handleFormAction.mock.calls[0][1].date).toEqual(
-  //       EXPECTED_VALUE_TYPE
-  //     );
-  //   });
-  // });
 });
