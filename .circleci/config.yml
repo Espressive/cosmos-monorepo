@@ -55,14 +55,28 @@ jobs:
           key: << pipeline.parameters.installed-key >>
           paths:
             - ~/
-
+  danger:
+    <<: *job_executor
+    steps:
+      - restore_cache:
+          key: << pipeline.parameters.installed-key >>
+      - run:
+          name: Danger Checks
+          command: |
+            if [ -n "$DANGER_GITHUB_API_TOKEN" ]; then
+              yarn danger ci --fail-on-errors=true
+            else
+              echo "Not running danger because $DANGER_GITHUB_API_TOKEN is not found"
+            fi
+          environment:
+            DANGER_GITHUB_API_TOKEN: $DANGER_GITHUB_API_TOKEN }}
   lint:
     <<: *job_executor
     steps:
       - restore_cache:
           key: << pipeline.parameters.installed-key >>
       - run:
-          name: Run Eslint
+          name: Danger Checks
           command: yarn lint --format junit --output-file ./coverage/eslint.xml
       - store_test_results:
           path: ./coverage
@@ -226,6 +240,9 @@ workflows:
       - install:
           <<: *install_pre_steps
           <<: *post_steps
+      - danger:
+          <<: *post_steps
+          <<: *requires_install
       - lint:
           <<: *post_steps
           <<: *requires_install
